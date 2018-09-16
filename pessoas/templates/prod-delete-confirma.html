@@ -9,12 +9,12 @@
 </head>
 <body>
 
- <h2>Tem certeza ? {{produto.nome}}</h2>
 
-    <form method="POST">
+
+    <form method="post">
         {% csrf_token %}
-        {{form}}
-        <button type="submit">deletar</button>
+        <h2>Tem certeza que quer deletar {{pessoa.nome}} ?</h2>
+        <button type="submit">Confirmar</button>
     </form>
 
 </body>

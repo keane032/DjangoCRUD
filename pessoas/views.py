@@ -32,7 +32,7 @@ def update_pessoa(request,id):
 def deletar_pessoa(request,id):
     pessoa = Pessoa.objects.get(id=id)
 
-    if request.POST == "POST":
+    if request.method == "POST":
         pessoa.delete()
         return redirect('lista_pessoas')
 

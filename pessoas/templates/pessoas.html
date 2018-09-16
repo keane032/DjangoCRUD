@@ -8,10 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-
+        <h1>Lista de Pessoas</h1>
 <ul>
     <li>
-        {% for pessoa in pessoas %}
+        {%for pessoa in pessoas %}
             <a href="{% url 'update_pessoa' pessoa.id  %}">
                 <li> {{ pessoa.nome }}</li>
             </a>
