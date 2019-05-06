@@ -1,0 +1,16 @@
+<div class="container">
+<div class="form-group">
+    <label>Nome</label>
+    <input type="text" class="form-control" #nomeInput>
+    <label>Endenreco</label>
+    <input type="text" class="form-control" #endInput>
+    <label>Idade</label>
+    <input type="number" class="form-control" #idadeInput>
+    <button class="btn btn-primary mt-2" (click)="adicionar(nomeInput.value,endInput.value,idadeInput.value)">Salvar</button>
+</div>
+
+
+  <div *ngFor="let p of pessoas">
+    {{p.nome}}-{{p.endereco}}
+  </div>
+</div>
