@@ -36,4 +36,16 @@ export class PessoaComponent{
     )
   }
 
+  deletar(id){
+    this.pessoaservi.deletar(id).subscribe(
+      (res:Pessoa) => {
+          this.getAll()
+      }
+    )
+  }
+
+  atualizar(nome, endereco, idade){
+
+  }
+
 }

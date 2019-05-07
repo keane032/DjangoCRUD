@@ -9,8 +9,19 @@
     <button class="btn btn-primary mt-2" (click)="adicionar(nomeInput.value,endInput.value,idadeInput.value)">Salvar</button>
 </div>
 
+<div class="row">
+    <div class="col-2">Nome</div>
+    <div class="col-4">Endereco</div>
+    <div class="col-4">Idade</div>
+    <div class="col-2">Acao</div>
+  </div>
 
-  <div *ngFor="let p of pessoas">
-    {{p.nome}}-{{p.endereco}}
+  <hr>
+
+  <div class="row mt-3" *ngFor="let p of pessoas">
+    <div class="col-2">{{p.nome}}</div>
+    <div class="col-4">{{p.endereco}}</div>
+    <div class="col-4">{{p.idade}}</div>
+    <div class="col-2"><button class="btn btn-primary" (click)="deletar(p.id)">excluir</button></div>
   </div>
 </div>

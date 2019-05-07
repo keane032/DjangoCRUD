@@ -21,5 +21,17 @@ export class PessoaService {
     })
   }
 
+  deletar(id){
+    return this.Http.delete("http://localhost:8000/pessoas/"+id)
+  }
+
+  update(pessoa:Pessoa){
+    return this.Http.put("http://localhost:8000/pessoas/"+pessoa.id,{
+      nome:pessoa.nome,
+      endereco:pessoa.endereco,
+      idade:pessoa.idade
+    });
+  }
+
 }
 
